@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
    entry: './src/js/main.js',
    output: {
-      path: path.join(__dirname, '/'),
+      path: path.join(__dirname, '/dist'),
       filename: 'app.js',
       publicPath: '/'
    },
