@@ -11,7 +11,7 @@ module.exports = {
    devServer: {
       inline: true,
       port: 8001,
-      contentBase: "./dist",
+      contentBase: "./",
    },
    module: {
       rules: [
@@ -27,7 +27,7 @@ module.exports = {
               {
                 loader: 'file-loader',
                 options: {
-                  name: 'dist/img/[hash]-[name].[ext]',
+                  name: 'img/[hash]-[name].[ext]',
                 },
               },
             ],
