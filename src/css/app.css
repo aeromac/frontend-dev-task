@@ -1,0 +1,215 @@
+:root {
+    --grey-20: #f0f1f1;
+    --grey-10: #f6f7f7;
+    --grey-50: #6f7579;
+    --grey-30: #d9dbdc;
+    --grey-40: #c4c7c8;
+    --blue-100: #2196f3;
+    --grey-70: #1e282d;
+    --grey-60: #4b5357;
+}
+
+.task-layout
+{
+    padding:64px;
+    max-width: 730px;
+}
+
+.task-layout_toolbar
+{
+    padding:40px 0;
+    height:48px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family:'Nunito Sans', sans-serif;
+    font-size: 16px;
+    color: #4b5357;
+}
+
+.task-toggle-button
+{
+    box-sizing: border-box;
+    height: 48px;
+    padding: 4px;
+    border-radius: 24px;
+    box-shadow: inset 1px 1px 2px 0 rgba(30, 40, 45, 0.2);
+    background-color: var(--grey-20);
+    display: flex;
+    position: relative;
+    margin-left:24px;
+}
+
+.task-toggle-button_choice
+{
+    display: flex;
+    align-items: center;
+    padding:8px;
+    z-index: 1;
+    flex: 1 0 auto;
+    user-select: none;
+}
+
+.task-toggle-button_choice_icon
+{
+    width:24px;
+    height:24px;
+    padding-right:8px;
+}
+
+.task-toggle-button_choice_label
+{
+    padding-right:8px;
+    font-family:'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--grey-60);
+    text-transform: uppercase;
+}
+
+.task-toggle-button_indiator
+{
+    box-sizing: border-box;
+    height: 40px;
+    background-color: white;
+    padding: 8px 16px 8px 8px;
+    border-radius: 22px;
+    box-shadow: 0 1px 3px 0 rgba(30, 40, 45, 0.2);
+    background-color: #fff;
+    position: absolute;
+    min-width:84px;
+    transition: left 150ms ease;
+}
+
+.task-toggle-button--firstchoice .task-toggle-button_indiator
+{
+}
+
+.task-table
+{
+    width:100%;
+    border-collapse: collapse;
+}
+
+.task-table thead
+{
+    background-color: var(--grey-10);
+}
+
+.task-table thead td
+{
+    padding:12px 16px;
+    line-height: 1.5;
+    font-family:'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--grey-70);
+    border-bottom: 1px solid var(--grey-30);
+}
+
+.task-table tbody td
+{
+    background-color: #fff;
+    padding:14px 16px;
+    line-height: 1.43;
+    font-family:'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--grey-70);
+    border-bottom: 1px solid var(--grey-20);
+}
+
+.task-table td:last-child
+{
+    text-align: end;
+}
+
+.task-chart
+{
+    position: relative;
+}
+
+.task-chart_axis
+{
+    position: absolute;
+    display:flex;
+    font-family:'Nunito Sans', sans-serif;
+    font-size: 16px;
+    color: var(--grey-60);
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.task-chart_axis-y
+{
+    top:0;
+    left:0;
+    right:0;
+    bottom:28px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-chart_axis-y>div
+{
+    display: flex;
+    align-items: center;
+}
+
+.task-chart_axis-y_label
+{
+    width:32px;
+}
+
+.task-chart_axis-y_ticks
+{
+    border-bottom: dotted 2px var(--grey-40);
+    width: 100%;
+    height: 1px;
+    margin-top:-1px;
+}
+
+.task-chart_axis-x
+{
+    height:32px;
+    bottom:0;
+    left:32px;
+    right:0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.task-chart_axis-x>div
+{
+    text-align: center;
+}
+
+.task-chart_bars
+{
+    position: absolute;
+    top:0;
+    bottom:35px;
+    left:32px;
+    right:0;
+    border-bottom: solid 2px var(--grey-40);
+    justify-content: space-around;
+    display: flex;
+    align-items: flex-end;
+    margin-top:6px;
+}
+
+.task-chart--resetting .task-chart_bar
+{
+    transition:none;
+}
+
+.task-chart_bar
+{
+    display: flex;
+    background-color: var(--blue-100);
+    width: 64px;
+    height: 0px;
+    margin-bottom: -2px;
+    transition: height 800ms ease 200ms;
+}
