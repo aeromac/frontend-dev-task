@@ -10,7 +10,7 @@ module.exports = {
    devServer: {
       inline: true,
       port: 8001,
-      contentBase: "./dist",
+      contentBase: "./",
    },
    module: {
       rules: [
