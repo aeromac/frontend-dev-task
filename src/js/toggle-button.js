@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import IconFooty from '/dist/img/icon-footy.svg';
-import IconAge from '/dist/img/icon-age.svg';
+import IconFooty from '../img/icon-footy.svg';
+import IconAge from '../img/icon-age.svg';
 
 export class ToggleButton extends Component
 {

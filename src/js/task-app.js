@@ -27,7 +27,7 @@ class TaskApp extends Component
 
     componentDidMount()
     {
-        axios.get('frontend-dev-task-data.json').then((result) =>
+        axios.get('/frontend-dev-task-data.json').then((result) =>
         {
             this.items = result.data;
 
